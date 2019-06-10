@@ -49,8 +49,5 @@ public class WeightedQuickUnionUF {
             id[j] = i;
             size[i] += size[j]; // update the size of i
         }
-
-
-        
     }
 }
