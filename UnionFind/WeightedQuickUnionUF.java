@@ -22,7 +22,11 @@ public class WeightedQuickUnionUF {
 
     private int root(int i)
     {
-        while(i != id[i]) i = id[i];    // chase parent pointers until reach root
+        while(i != id[i])
+        {
+            id[i] = id[id[i]];   // this line represents "path compression"
+            i = id[i];    // chase parent pointers until reach root
+        } 
         return i;
     }
 
