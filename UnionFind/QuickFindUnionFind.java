@@ -13,7 +13,7 @@ public class QuickFindUnionFind
         return id[p] == id[q];   
     }
 
-    public void union(int p, int q)
+    public void union(int p, int q)   // change root of p to point to root of q
     {
         int pid = id[p];
         int qid = id[q];
